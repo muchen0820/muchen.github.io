@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>简单网页示例</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      /* CSS 样式 */
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+      }
+      h1 {
+        color: #333;
+        text-align: center;
+      }
+      #message {
+        font-size: 18px;
+        color: green;
+        text-align: center;
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>欢迎来到简单网页示例</h1>
+    <form>
+      <label for="name">请输入您的姓名：</label>
+      <input type="text" id="name" name="name">
+      <button type="button" onclick="showMessage()">提交</button>
+    </form>
+    <div id="message"></div>
+    <script>
+      // JavaScript 代码
+      function showMessage() {
+        var name = document.getElementById("name").value;
+        var message = "欢迎，" + name + "！";
+        document.getElementById("message").innerHTML = message;
+        document.getElementById("message").style.display = "block";
+      }
+    </script>
+  </body>
+</html>
